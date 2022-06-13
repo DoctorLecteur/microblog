@@ -1,0 +1,1619 @@
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.4.0-210-generic (buildd@lgw01-amd64-009) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) ) #242-Ubuntu SMP Fri Apr 16 09:57:56 UTC 2021 (Ubuntu 4.4.0-210.242-generic 4.4.262)
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.4.0-210-generic root=LABEL=cloudimg-rootfs ro console=tty1 console=ttyS0
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] x86/fpu: Legacy x87 FPU detected.
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000003ffeffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000003fff0000-0x000000003fffffff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.5 present.
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] Kernel/User page tables isolation: disabled
+[    0.000000] e820: last_pfn = 0x3fff0 max_arch_pfn = 0x400000000
+[    0.000000] MTRR: Disabled
+[    0.000000] x86/PAT: MTRRs disabled, skipping PAT initialization too.
+[    0.000000] CPU MTRRs all blank - virtualized system.
+[    0.000000] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+[    0.000000] found SMP MP-table at [mem 0x0009fff0-0x0009ffff] mapped at [ffff88000009fff0]
+[    0.000000] Scanning 1 areas for low memory corruption
+[    0.000000] RAMDISK: [mem 0x362dc000-0x37165fff]
+[    0.000000] ACPI: Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+[    0.000000] ACPI: XSDT 0x000000003FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+[    0.000000] ACPI: FACP 0x000000003FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+[    0.000000] ACPI: DSDT 0x000000003FFF0470 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+[    0.000000] ACPI: FACS 0x000000003FFF0200 000040
+[    0.000000] ACPI: FACS 0x000000003FFF0200 000040
+[    0.000000] ACPI: APIC 0x000000003FFF0240 00005C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[    0.000000] ACPI: SSDT 0x000000003FFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+[    0.000000] No NUMA configuration found
+[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000003ffeffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x3ffeb000-0x3ffeffff]
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: cpu 0, msr 0:3ffe3001, primary cpu clock
+[    0.000000] kvm-clock: using sched offset of 3755448732 cycles
+[    0.000000] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.000000]   DMA32    [mem 0x0000000001000000-0x000000003ffeffff]
+[    0.000000]   Normal   empty
+[    0.000000]   Device   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.000000]   node   0: [mem 0x0000000000100000-0x000000003ffeffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000003ffeffff]
+[    0.000000] ACPI: PM-Timer IO Port: 0x4008
+[    0.000000] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-23
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+[    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.000000] e820: [mem 0x40000000-0xfebfffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on KVM
+[    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.000000] setup_percpu: NR_CPUS:512 nr_cpumask_bits:512 nr_cpu_ids:2 nr_node_ids:1
+[    0.000000] PERCPU: Embedded 33 pages/cpu @ffff88003fc00000 s95192 r8192 d31784 u1048576
+[    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 257912
+[    0.000000] Policy zone: DMA32
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.4.0-210-generic root=LABEL=cloudimg-rootfs ro console=tty1 console=ttyS0
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 997792K/1048120K available (8644K kernel code, 1332K rwdata, 4044K rodata, 1492K init, 1164K bss, 50328K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 64.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=512 to nr_cpu_ids=2.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=2
+[    0.000000] NR_IRQS:33024 nr_irqs:440 16
+[    0.000000] Console: colour VGA+ 80x25
+[    0.000000] console [tty1] enabled
+[    0.000000] console [ttyS0] enabled
+[    0.000000] tsc: Detected 2688.000 MHz processor
+[    0.441671] Calibrating delay loop (skipped) preset value.. 5376.00 BogoMIPS (lpj=10752000)
+[    0.447069] pid_max: default: 32768 minimum: 301
+[    0.449833] ACPI: Core revision 20150930
+[    0.452936] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.457082] Security Framework initialized
+[    0.459491] Yama: becoming mindful.
+[    0.461650] AppArmor: AppArmor initialized
+[    0.464387] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.471586] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.478332] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.483198] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.489747] Initializing cgroup subsys io
+[    0.493945] Initializing cgroup subsys memory
+[    0.497598] Initializing cgroup subsys devices
+[    0.501531] Initializing cgroup subsys freezer
+[    0.506144] Initializing cgroup subsys net_cls
+[    0.509876] Initializing cgroup subsys perf_event
+[    0.514557] Initializing cgroup subsys net_prio
+[    0.518393] Initializing cgroup subsys hugetlb
+[    0.522523] Initializing cgroup subsys pids
+[    0.526818] mce: CPU supports 0 MCE banks
+[    0.530464] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.535306] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    0.540314] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.546022] Spectre V2 : Mitigation: Enhanced IBRS
+[    0.549617] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.555953] Speculative Store Bypass: Vulnerable
+[    0.587942] Freeing SMP alternatives memory: 36K
+[    0.655379] ftrace: allocating 32380 entries in 127 pages
+[    1.094154] smpboot: APIC(0) Converting physical 0 to logical package 0
+[    1.099577] smpboot: Max logical packages: 1
+[    1.113473] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    1.227539] smpboot: CPU0: 11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz (family: 0x6, model: 0x8d, stepping: 0x1)
+[    1.235891] Performance Events: unsupported p6 CPU model 141 no PMU driver, software events only.
+[    1.308168] KVM setup paravirtual spinlock
+[    1.313372] x86: Booting SMP configuration:
+[    1.316455] .... node  #0, CPUs:      #1
+[    1.320408] kvm-clock: cpu 1, msr 0:3ffe3041, secondary cpu clock
+[    1.323502] mce: CPU supports 0 MCE banks
+[    1.326924] x86: Booted up 1 node, 2 CPUs
+[    1.329932] smpboot: Total of 2 processors activated (10752.00 BogoMIPS)
+[    1.337898] devtmpfs: initialized
+[    1.341676] evm: security.selinux
+[    1.344151] evm: security.SMACK64
+[    1.346563] evm: security.SMACK64EXEC
+[    1.349215] evm: security.SMACK64TRANSMUTE
+[    1.352073] evm: security.SMACK64MMAP
+[    1.354956] evm: security.ima
+[    1.357242] evm: security.capability
+[    1.359785] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    1.365078] futex hash table entries: 512 (order: 3, 32768 bytes)
+[    1.368887] pinctrl core: initialized pinctrl subsystem
+[    1.372057] RTC time: 18:25:27, date: 06/08/22
+[    1.375177] NET: Registered protocol family 16
+[    1.385605] cpuidle: using governor ladder
+[    1.397324] cpuidle: using governor menu
+[    1.400092] PCCT header not found.
+[    1.403195] ACPI: bus type PCI registered
+[    1.405467] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    1.409197] PCI: Using configuration type 1 for base access
+[    1.423898] ACPI: Added _OSI(Module Device)
+[    1.426796] ACPI: Added _OSI(Processor Device)
+[    1.429250] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    1.431842] ACPI: Added _OSI(Processor Aggregator Device)
+[    1.435686] ACPI: Executed 1 blocks of module-level executable AML code
+[    1.442190] ACPI: Interpreter enabled
+[    1.445426] ACPI: (supports S0 S5)
+[    1.447409] ACPI: Using IOAPIC for interrupt routing
+[    1.450696] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    1.463356] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    1.468007] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+[    1.473508] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    1.480503] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    1.488843] PCI host bridge to bus 0000:00
+[    1.491811] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    1.496862] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    1.501602] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    1.506810] pci_bus 0000:00: root bus resource [mem 0x40000000-0xfdffffff window]
+[    1.512091] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    1.521102] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    1.526062] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    1.531002] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    1.535325] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    1.558482] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    1.563979] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    1.577446] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    1.583671] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    1.589345] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    1.595131] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    1.600810] ACPI: Enabled 2 GPEs in block 00 to 07
+[    1.605441] vgaarb: setting as boot device: PCI:0000:00:02.0
+[    1.623116] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+[    1.629178] vgaarb: loaded
+[    1.631277] vgaarb: bridge control possible 0000:00:02.0
+[    1.635437] SCSI subsystem initialized
+[    1.639169] ACPI: bus type USB registered
+[    1.642406] usbcore: registered new interface driver usbfs
+[    1.646744] usbcore: registered new interface driver hub
+[    1.650904] usbcore: registered new device driver usb
+[    1.656083] PCI: Using ACPI for IRQ routing
+[    1.660423] NetLabel: Initializing
+[    1.663389] NetLabel:  domain hash size = 128
+[    1.667515] NetLabel:  protocols = UNLABELED CIPSOv4
+[    1.671747] NetLabel:  unlabeled traffic allowed by default
+[    1.676006] amd_nb: Cannot enumerate AMD northbridges
+[    1.679419] clocksource: Switched to clocksource kvm-clock
+[    1.699588] AppArmor: AppArmor Filesystem Enabled
+[    1.705009] pnp: PnP ACPI init
+[    1.709431] pnp: PnP ACPI: found 3 devices
+[    1.744542] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.751079] NET: Registered protocol family 2
+[    1.755553] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    1.760728] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[    1.765496] TCP: Hash tables configured (established 8192 bind 8192)
+[    1.770033] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    1.774008] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    1.778288] NET: Registered protocol family 1
+[    1.781411] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    1.785502] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    1.790040] Unpacking initramfs...
+[    2.063936] Freeing initrd memory: 14888K
+[    2.066883] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x26bef67878b, max_idle_ns: 440795293631 ns
+[    2.073563] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    2.078752] Scanning for low memory corruption every 60 seconds
+[    2.083445] audit: initializing netlink subsys (disabled)
+[    2.087254] audit: type=2000 audit(1654712731.390:1): initialized
+[    2.091640] Initialise system trusted keyring
+[    2.095671] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    2.102027] zbud: loaded
+[    2.105794] VFS: Disk quotas dquot_6.6.0
+[    2.108592] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    2.113353] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.118210] fuse init (API version 7.23)
+[    2.121853] Key type big_key registered
+[    2.124750] Allocating IMA MOK and blacklist keyrings.
+[    2.145065] Key type asymmetric registered
+[    2.149935] Asymmetric key parser 'x509' registered
+[    2.153613] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    2.159206] io scheduler noop registered
+[    2.162008] io scheduler deadline registered (default)
+[    2.165743] io scheduler cfq registered
+[    2.169147] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    2.173015] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    2.177835] ACPI: AC Adapter [AC] (on-line)
+[    2.181105] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    2.187488] ACPI: Power Button [PWRF]
+[    2.190331] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    2.195490] ACPI: Sleep Button [SLPF]
+[    2.198948] GHES: HEST is not enabled!
+[    2.200122] ACPI: Battery Slot [BAT0] (battery present)
+[    2.204857] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    2.232299] 00:02: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    2.250659] Linux agpgart interface v0.103
+[    2.261557] loop: module loaded
+[    2.265281] scsi host0: ata_piix
+[    2.267851] scsi host1: ata_piix
+[    2.269733] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    2.273420] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    2.277361] libphy: Fixed MDIO Bus: probed
+[    2.280334] tun: Universal TUN/TAP device driver, 1.6
+[    2.283845] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    2.289244] PPP generic driver version 2.4.2
+[    2.292485] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.296008] ehci-pci: EHCI PCI platform driver
+[    2.298492] ehci-platform: EHCI generic platform driver
+[    2.301361] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.305324] ohci-pci: OHCI PCI platform driver
+[    2.308612] ohci-platform: OHCI generic platform driver
+[    2.312139] uhci_hcd: USB Universal Host Controller Interface driver
+[    2.316417] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    2.324725] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    2.328283] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    2.332692] mousedev: PS/2 mouse device common for all mice
+[    2.338831] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+[    2.342579] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    2.346087] i2c /dev entries driver
+[    2.348896] device-mapper: uevent: version 1.0.3
+[    2.352544] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
+[    2.358404] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.363172] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    2.370202] NET: Registered protocol family 10
+[    2.373978] NET: Registered protocol family 17
+[    2.377160] Key type dns_resolver registered
+[    2.381535] registered taskstats version 1
+[    2.384519] Loading compiled-in X.509 certificates
+[    2.388406] Loaded X.509 cert 'Build time autogenerated kernel key: cf00e047681d67edb2720680708b7d9498083038'
+[    2.395189] zswap: loaded using pool lzo/zbud
+[    2.402406] Key type trusted registered
+[    2.410672] Key type encrypted registered
+[    2.413639] AppArmor: AppArmor sha1 policy hashing enabled
+[    2.417355] ima: No TPM chip found, activating TPM-bypass!
+[    2.421351] ima: Allocated hash algorithm: sha1
+[    2.423932] evm: HMAC attrs: 0x1
+[    2.426669]   Magic number: 10:883:442
+[    2.429242] rtc_cmos rtc_cmos: setting system clock to 2022-06-08 18:25:28 UTC (1654712728)
+[    2.456725] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[    2.460727] EDD information not available.
+[    2.482510] Freeing unused kernel memory: 1492K
+[    2.496562] Write protecting the kernel read-only data: 14336k
+[    2.501190] Freeing unused kernel memory: 1584K
+[    2.509684] Freeing unused kernel memory: 52K
+Loading, please wait...
+[    2.529975] random: systemd-udevd: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    2.530824] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+starting version 229
+[    2.530835] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    2.540614] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    2.540642] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    2.540777] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    2.540809] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    2.540872] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    2.540920] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    2.540952] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[   29.560140] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[   29.568907] Modules linked in:
+[   29.573232] CPU: 1 PID: 117 Comm: systemd-udevd Not tainted 4.4.0-210-generic #242-Ubuntu
+[   29.578511] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[   29.583978] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[   29.588826] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[   29.594976] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[   29.598369] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[   29.604380] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[   29.609392] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[   29.614288] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[   29.619781] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[   29.624835] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[   29.630448] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[   29.634823] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[   29.639905] Stack:
+[   29.641685]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[   29.648935]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[   29.656973]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[   29.663331] Call Trace:
+[   29.665298]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   29.670200]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[   29.674460]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   29.678536]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[   29.682144]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[   29.687429]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[   29.692020]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[   29.696023]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[   29.714896]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[   29.720242]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[   29.723629]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[   29.726906]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[   29.730081]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[   29.733527]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[   29.737208]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[   29.740959]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[   29.745246] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[   57.553188] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[   57.559264] Modules linked in:
+[   57.561895] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[   57.567426] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[   57.572296] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[   57.576917] RIP: 0010:[<ffffffff8110c026>]  [<ffffffff8110c026>] smp_call_function_single+0xd6/0x130
+[   57.582961] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[   57.586210] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[   57.591028] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[   57.595268] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[   57.599529] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[   57.603640] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[   57.607624] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[   57.612236] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[   57.615624] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[   57.619651] Stack:
+[   57.620938]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[   57.626108]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[   57.631631]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[   57.637020] Call Trace:
+[   57.638523]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   57.641956]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[   57.645780]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   57.649311]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[   57.652966]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[   57.656454]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[   57.660719]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[   57.664058]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[   57.667736]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[   57.670832]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[   57.674237]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[   57.677788]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[   57.681540]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[   57.685298]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[   57.689396]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[   57.693291]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[   57.698034] Code: 33 1c 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf <f3> 90 8b 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 
+[   62.622067] INFO: rcu_sched self-detected stall on CPU
+[   62.626173] 	1-...: (4183 ticks this GP) idle=84d/140000000000001/0 softirq=136/146 fqs=0 
+[   62.631441] 	 (t=15001 jiffies g=-263 c=-264 q=6996)
+[   62.634926] rcu_sched kthread starved for 15001 jiffies! g18446744073709551353 c18446744073709551352 f0x0 s3 ->state=0x1
+[   62.641932] Task dump for CPU 0:
+[   62.644398] systemd-udevd   R  running task        0   115    109 0x00000000
+[   62.649563]  00000000000364ce ffff8800364cbc00 0000000000000001 ffff88003d5dd200
+[   62.656178]  ffff8800364cbc10 ffff880036e23db8 ffffffff8121ca84 ffff880036e24000
+[   62.662860]  00007ffffffff000 ffff8800364cbc00 ffff880036e23ea8 00007f2e348c3e23
+[   62.670878] Call Trace:
+[   62.672878]  [<ffffffff8121ca84>] ? vfs_read+0x114/0x130
+[   62.676695]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[   62.680523]  [<ffffffff8110ed6d>] ? copy_module_from_fd.isra.55+0xfd/0x150
+[   62.685304]  [<ffffffff81112cf4>] ? SYSC_finit_module+0xb4/0xe0
+[   62.689670]  [<ffffffff81112d3e>] ? SyS_finit_module+0xe/0x10
+[   62.693713]  [<ffffffff8186bb5b>] ? entry_SYSCALL_64_fastpath+0x22/0xd0
+[   62.698327] Task dump for CPU 1:
+[   62.700765] systemd-udevd   R  running task        0   117    109 0x00000008
+[   62.706348]  ffff88003ae32700 b8119388785d3a69 ffff88003fd03da0 ffffffff810b4d89
+[   62.712889]  0000000000000001 ffffffff81e577c0 ffff88003fd03db8 ffffffff810b75b7
+[   62.717868]  0000000000000002 ffff88003fd03de8 ffffffff810ec56e ffff88003fd16f80
+[   62.722849] Call Trace:
+[   62.724386]  <IRQ>  [<ffffffff810b4d89>] sched_show_task+0xa9/0x110
+[   62.728056]  [<ffffffff810b75b7>] dump_cpu_task+0x37/0x40
+[   62.731425]  [<ffffffff810ec56e>] rcu_dump_cpu_stacks+0x8e/0xe0
+[   62.734664]  [<ffffffff810f0560>] rcu_check_callbacks+0x500/0x7f0
+[   62.738348]  [<ffffffff81149f6c>] ? acct_account_cputime+0x1c/0x20
+[   62.743620]  [<ffffffff810b8059>] ? account_system_time+0x79/0x120
+[   62.747069]  [<ffffffff81106b70>] ? tick_sched_handle.isra.14+0x60/0x60
+[   62.750652]  [<ffffffff810f6a29>] update_process_times+0x39/0x60
+[   62.754084]  [<ffffffff81106b35>] tick_sched_handle.isra.14+0x25/0x60
+[   62.757585]  [<ffffffff81106bad>] tick_sched_timer+0x3d/0x70
+[   62.760692]  [<ffffffff810f7334>] __hrtimer_run_queues+0xf4/0x260
+[   62.764010]  [<ffffffff810f7a88>] hrtimer_interrupt+0xa8/0x1a0
+[   62.767232]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   62.770464]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   62.773875]  [<ffffffff81055b3e>] local_apic_timer_interrupt+0x3e/0x60
+[   62.778040]  [<ffffffff8186f44b>] smp_apic_timer_interrupt+0x4b/0x70
+[   62.781483]  [<ffffffff8186cb94>] apic_timer_interrupt+0xd4/0xe0
+[   62.785107]  <EOI>  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   62.789070]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   62.792657]  [<ffffffff8110c028>] ? smp_call_function_single+0xd8/0x130
+[   62.796602]  [<ffffffff8110c01e>] ? smp_call_function_single+0xce/0x130
+[   62.800278]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   62.803568]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[   62.807135]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   62.810711]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[   62.814032]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[   62.818006]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[   62.821978]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[   62.825623]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[   62.829617]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[   62.832995]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[   62.836592]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[   62.840822]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[   62.844287]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[   62.847713]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[   62.851454]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[   62.855385]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[   89.551905] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[   89.557745] Modules linked in:
+[   89.560314] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[   89.566819] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[   89.572579] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[   89.578042] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[   89.584705] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[   89.588436] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[   89.593563] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[   89.598790] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[   89.603658] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[   89.608612] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[   89.613600] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[   89.619552] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[   89.623656] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[   89.628599] Stack:
+[   89.630258]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[   89.636982]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[   89.643659]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[   89.650136] Call Trace:
+[   89.652156]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   89.656636]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[   89.661260]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[   89.665366]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[   89.669096]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[   89.673523]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[   89.677971]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[   89.682499]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[   89.687115]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[   89.691003]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[   89.695089]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[   89.699090]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[   89.703662]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[   89.707584]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[   89.711773]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[   89.715840]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[   89.720419] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  117.553617] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  117.561332] Modules linked in:
+[  117.564540] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  117.572563] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  117.584024] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  117.590054] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  117.601783] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  117.605870] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  117.610356] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  117.614636] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  117.619126] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  117.623407] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  117.627698] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  117.632813] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  117.636558] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  117.641600] Stack:
+[  117.643175]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  117.649332]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  117.655553]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  117.661889] Call Trace:
+[  117.663771]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  117.667829]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  117.672606]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  117.676948]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  117.680872]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  117.685439]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  117.689868]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  117.693999]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  117.698364]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  117.702116]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  117.706415]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  117.710331]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  117.713754]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  117.716942]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  117.720212]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  117.723307]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  117.726996] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  145.552879] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  145.557585] Modules linked in:
+[  145.559770] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  145.566767] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  145.573405] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  145.579686] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  145.586331] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  145.590389] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  145.595899] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  145.601542] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  145.607487] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  145.612853] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  145.618538] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  145.624754] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  145.629100] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  145.634589] Stack:
+[  145.636459]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  145.643366]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  145.650985]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  145.657540] Call Trace:
+[  145.659563]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  145.664540]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  145.669463]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  145.673837]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  145.677742]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  145.682504]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  145.686853]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  145.690348]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  145.694043]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  145.697342]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  145.701080]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  145.706169]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  145.710297]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  145.714662]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  145.719466]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  145.724486]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  145.730285] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  173.550886] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  173.556604] Modules linked in:
+[  173.558981] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  173.565229] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  173.570668] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  173.575580] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  173.581668] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  173.585266] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  173.589794] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  173.594924] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  173.599487] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  173.604953] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  173.609958] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  173.615404] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  173.619488] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  173.624745] Stack:
+[  173.626736]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  173.633836]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  173.640544]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  173.647588] Call Trace:
+[  173.649600]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  173.653837]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  173.658459]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  173.662476]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  173.666286]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  173.670814]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  173.675073]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  173.679515]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  173.684460]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  173.688245]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  173.692263]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  173.696357]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  173.700508]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  173.703980]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  173.708073]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  173.712223]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  173.717374] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  201.552114] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  201.558025] Modules linked in:
+[  201.560536] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  201.566966] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  201.572451] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  201.577435] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  201.583504] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  201.587234] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  201.592489] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  201.597300] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  201.602329] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  201.607774] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  201.613056] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  201.619187] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  201.623559] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  201.629303] Stack:
+[  201.631106]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  201.638111]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  201.645049]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  201.652634] Call Trace:
+[  201.655073]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  201.662034]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  201.667682]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  201.671970]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  201.675674]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  201.679869]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  201.684175]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  201.688357]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  201.692474]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  201.695866]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  201.699596]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  201.703185]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  201.706659]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  201.713071]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  201.716526]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  201.719822]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  201.723479] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  229.564651] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  229.569851] Modules linked in:
+[  229.572177] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  229.577751] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  229.583087] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  229.587572] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  229.592996] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  229.596056] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  229.600331] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  229.604534] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  229.608879] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  229.613053] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  229.617312] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  229.622956] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  229.627741] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  229.634636] Stack:
+[  229.636864]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  229.644940]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  229.652537]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  229.659917] Call Trace:
+[  229.662200]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  229.667303]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  229.672821]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  229.677680]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  229.681997]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  229.687539]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  229.692736]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  229.697840]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  229.702237]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  229.705639]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  229.709505]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  229.713478]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  229.717571]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  229.721437]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  229.725399]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  229.729329]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  229.734137] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  242.638633] INFO: rcu_sched self-detected stall on CPU
+[  242.642619] 	1-...: (16764 ticks this GP) idle=84d/140000000000001/0 softirq=136/146 fqs=0 
+[  242.648345] 	 (t=60005 jiffies g=-263 c=-264 q=6996)
+[  242.651573] rcu_sched kthread starved for 60005 jiffies! g18446744073709551353 c18446744073709551352 f0x0 s3 ->state=0x1
+[  242.657864] Task dump for CPU 0:
+[  242.660067] systemd-udevd   R  running task        0   115    109 0x00000000
+[  242.664642]  00000000000364ce ffff8800364cbc00 0000000000000001 ffff88003d5dd200
+[  242.669949]  ffff8800364cbc10 ffff880036e23db8 ffffffff8121ca84 ffff880036e24000
+[  242.678831]  00007ffffffff000 ffff8800364cbc00 ffff880036e23ea8 00007f2e348c3e23
+[  242.684112] Call Trace:
+[  242.685797]  [<ffffffff8121ca84>] ? vfs_read+0x114/0x130
+[  242.689518]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  242.693728]  [<ffffffff8110ed6d>] ? copy_module_from_fd.isra.55+0xfd/0x150
+[  242.699100]  [<ffffffff81112cf4>] ? SYSC_finit_module+0xb4/0xe0
+[  242.704123]  [<ffffffff81112d3e>] ? SyS_finit_module+0xe/0x10
+[  242.708360]  [<ffffffff8186bb5b>] ? entry_SYSCALL_64_fastpath+0x22/0xd0
+[  242.713701] Task dump for CPU 1:
+[  242.716260] systemd-udevd   R  running task        0   117    109 0x00000008
+[  242.722179]  ffff88003ae32700 b8119388785d3a69 ffff88003fd03da0 ffffffff810b4d89
+[  242.729924]  0000000000000001 ffffffff81e577c0 ffff88003fd03db8 ffffffff810b75b7
+[  242.736615]  0000000000000002 ffff88003fd03de8 ffffffff810ec56e ffff88003fd16f80
+[  242.743839] Call Trace:
+[  242.746147]  <IRQ>  [<ffffffff810b4d89>] sched_show_task+0xa9/0x110
+[  242.751385]  [<ffffffff810b75b7>] dump_cpu_task+0x37/0x40
+[  242.755981]  [<ffffffff810ec56e>] rcu_dump_cpu_stacks+0x8e/0xe0
+[  242.759998]  [<ffffffff810f0560>] rcu_check_callbacks+0x500/0x7f0
+[  242.765091]  [<ffffffff81149f6c>] ? acct_account_cputime+0x1c/0x20
+[  242.769533]  [<ffffffff810b8059>] ? account_system_time+0x79/0x120
+[  242.773661]  [<ffffffff81106b70>] ? tick_sched_handle.isra.14+0x60/0x60
+[  242.778068]  [<ffffffff810f6a29>] update_process_times+0x39/0x60
+[  242.782045]  [<ffffffff81106b35>] tick_sched_handle.isra.14+0x25/0x60
+[  242.786278]  [<ffffffff81106bad>] tick_sched_timer+0x3d/0x70
+[  242.790222]  [<ffffffff810f7334>] __hrtimer_run_queues+0xf4/0x260
+[  242.794285]  [<ffffffff810f7a88>] hrtimer_interrupt+0xa8/0x1a0
+[  242.798196]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  242.802058]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  242.805953]  [<ffffffff81055b3e>] local_apic_timer_interrupt+0x3e/0x60
+[  242.810232]  [<ffffffff8186f44b>] smp_apic_timer_interrupt+0x4b/0x70
+[  242.814615]  [<ffffffff8186cb94>] apic_timer_interrupt+0xd4/0xe0
+[  242.818723]  <EOI>  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  242.823678]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  242.827932]  [<ffffffff8110c028>] ? smp_call_function_single+0xd8/0x130
+[  242.833418]  [<ffffffff8110c01e>] ? smp_call_function_single+0xce/0x130
+[  242.838178]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  242.842338]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  242.847438]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  242.852151]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  242.856718]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  242.861220]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  242.866056]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  242.870466]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  242.875504]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  242.879706]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  242.884055]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  242.887923]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  242.891879]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  242.895185]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  242.898687]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  242.902025]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  269.545456] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 23s! [systemd-udevd:117]
+[  269.553559] Modules linked in:
+[  269.556071] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  269.562969] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  269.568452] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  269.573381] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  269.579171] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  269.582564] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  269.587017] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  269.591573] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  269.595848] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  269.601450] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  269.607227] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  269.611913] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  269.615150] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  269.619174] Stack:
+[  269.620497]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  269.625572]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  269.630701]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  269.636562] Call Trace:
+[  269.638525]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  269.642912]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  269.647478]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  269.652464]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  269.657170]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  269.662705]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  269.668033]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  269.673022]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  26[ 3002.870939] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 3002.874250] 	(detected by 1, t=150017 jiffies, g=8976, c=8975, q=2505)
+[ 3002.877869] All QSes seen, last rcu_sched kthread activity 150017 (4295642593-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 3002.884523] rcu_sched kthread starved for 150017 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 3182.959911] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 3182.963085] 	(detected by 1, t=195022 jiffies, g=8976, c=8975, q=2905)
+[ 3182.966583] All QSes seen, last rcu_sched kthread activity 195022 (4295687598-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 3182.973147] rcu_sched kthread starved for 195022 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 3362.889520] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 3362.893063] 	(detected by 1, t=240027 jiffies, g=8976, c=8975, q=3303)
+[ 3362.897109] All QSes seen, last rcu_sched kthread activity 240027 (4295732603-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 3362.904436] rcu_sched kthread starved for 240027 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 3542.921343] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 3542.929593] 	(detected by 1, t=285032 jiffies, g=8976, c=8975, q=3703)
+[ 3542.933931] All QSes seen, last rcu_sched kthread activity 285032 (4295777608-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 3542.942341] rcu_sched kthread starved for 285032 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 3722.949540] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 3722.952604] 	(detected by 1, t=330037 jiffies, g=8976, c=8975, q=4101)
+[ 3722.956157] All QSes seen, last rcu_sched kthread activity 330037 (4295822613-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 3722.962582] rcu_sched kthread starved for 330037 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 3902.891418] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 3902.895601] 	(detected by 1, t=375042 jiffies, g=8976, c=8975, q=4501)
+[ 3902.899167] All QSes seen, last rcu_sched kthread activity 375042 (4295867618-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 3902.905627] rcu_sched kthread starved for 375042 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 4082.999644] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 4083.003181] 	(detected by 1, t=420047 jiffies, g=8976, c=8975, q=4899)
+[ 4083.007309] All QSes seen, last rcu_sched kthread activity 420047 (4295912623-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 4083.014777] rcu_sched kthread starved for 420047 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 4262.929605] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 4262.933326] 	(detected by 1, t=465052 jiffies, g=8976, c=8975, q=5299)
+[ 4262.936953] All QSes seen, last rcu_sched kthread activity 465052 (4295957628-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 4262.943336] rcu_sched kthread starved for 465052 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 4442.971609] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 4442.975366] 	(detected by 1, t=510057 jiffies, g=8976, c=8975, q=5697)
+[ 4442.979343] All QSes seen, last rcu_sched kthread activity 510057 (4296002633-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 4442.986821] rcu_sched kthread starved for 510057 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 4623.000221] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 4623.004424] 	(detected by 1, t=555062 jiffies, g=8976, c=8975, q=6097)
+[ 4623.008794] All QSes seen, last rcu_sched kthread activity 555062 (4296047638-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 4623.017010] rcu_sched kthread starved for 555062 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 4802.929769] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 4802.936953] 	(detected by 1, t=600067 jiffies, g=8976, c=8975, q=6495)
+[ 4802.940862] All QSes seen, last rcu_sched kthread activity 600067 (4296092643-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 4802.947937] rcu_sched kthread starved for 600067 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 4982.991382] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 4982.996069] 	(detected by 1, t=645072 jiffies, g=8976, c=8975, q=6895)
+[ 4983.000673] All QSes seen, last rcu_sched kthread activity 645072 (4296137648-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 4983.009084] rcu_sched kthread starved for 645072 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 5163.030522] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 5163.035578] 	(detected by 1, t=690077 jiffies, g=8976, c=8975, q=7293)
+[ 5163.040364] All QSes seen, last rcu_sched kthread activity 690077 (4296182653-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 5163.049116] rcu_sched kthread starved for 690077 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 5342.960419] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 5342.963468] 	(detected by 1, t=735082 jiffies, g=8976, c=8975, q=7693)
+[ 5342.967016] All QSes seen, last rcu_sched kthread activity 735082 (4296227658-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 5342.973759] rcu_sched kthread starved for 735082 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 5523.051669] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 5523.055163] 	(detected by 1, t=780087 jiffies, g=8976, c=8975, q=8091)
+[ 5523.059103] All QSes seen, last rcu_sched kthread activity 780087 (4296272663-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 5523.066450] rcu_sched kthread starved for 780087 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 5703.050107] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 5703.054789] 	(detected by 1, t=825092 jiffies, g=8976, c=8975, q=8491)
+[ 5703.058930] All QSes seen, last rcu_sched kthread activity 825092 (4296317668-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 5703.066491] rcu_sched kthread starved for 825092 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 5882.991710] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 5882.994829] 	(detected by 1, t=870097 jiffies, g=8976, c=8975, q=8889)
+[ 5882.998857] All QSes seen, last rcu_sched kthread activity 870097 (4296362673-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 5883.006622] rcu_sched kthread starved for 870097 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 6063.102340] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 6063.109680] 	(detected by 1, t=915102 jiffies, g=8976, c=8975, q=9289)
+[ 6063.113495] All QSes seen, last rcu_sched kthread activity 915102 (4296407678-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 6063.120510] rcu_sched kthread starved for 915102 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 6243.039821] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 6243.043682] 	(detected by 1, t=960107 jiffies, g=8976, c=8975, q=9687)
+[ 6243.048106] All QSes seen, last rcu_sched kthread activity 960107 (4296452683-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 6243.056098] rcu_sched kthread starved for 960107 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 6423.082138] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 6423.085905] 	(detected by 1, t=1005112 jiffies, g=8976, c=8975, q=10087)
+[ 6423.089976] All QSes seen, last rcu_sched kthread activity 1005112 (4296497688-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 6423.097195] rcu_sched kthread starved for 1005112 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 6603.160704] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 6603.164998] 	(detected by 1, t=1050117 jiffies, g=8976, c=8975, q=10485)
+[ 6603.169999] All QSes seen, last rcu_sched kthread activity 1050117 (4296542693-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 6603.196737] rcu_sched kthread starved for 1050117 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 6783.090311] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 6783.094313] 	(detected by 1, t=1095122 jiffies, g=8976, c=8975, q=10885)
+[ 6783.098784] All QSes seen, last rcu_sched kthread activity 1095122 (4296587698-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 6783.107003] rcu_sched kthread starved for 1095122 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 6963.092062] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 6963.095803] 	(detected by 1, t=1140127 jiffies, g=8976, c=8975, q=11283)
+[ 6963.099702] All QSes seen, last rcu_sched kthread activity 1140127 (4296632703-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 6963.106713] rcu_sched kthread starved for 1140127 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 7143.130225] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 7143.134431] 	(detected by 1, t=1185132 jiffies, g=8976, c=8975, q=11683)
+[ 7143.139215] All QSes seen, last rcu_sched kthread activity 1185132 (4296677708-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 7143.147466] rcu_sched kthread starved for 1185132 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 7323.102596] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 7323.106216] 	(detected by 1, t=1230137 jiffies, g=8976, c=8975, q=12081)
+[ 7323.110308] All QSes seen, last rcu_sched kthread activity 1230137 (4296722713-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 7323.117768] rcu_sched kthread starved for 1230137 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 7503.210658] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 7503.214215] 	(detected by 1, t=1275142 jiffies, g=8976, c=8975, q=12481)
+[ 7503.218235] All QSes seen, last rcu_sched kthread activity 1275142 (4296767718-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 7503.225715] rcu_sched kthread starved for 1275142 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 7683.140293] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 7683.145144] 	(detected by 1, t=1320147 jiffies, g=8976, c=8975, q=12879)
+[ 7683.148950] All QSes seen, last rcu_sched kthread activity 1320147 (4296812723-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 7683.156451] rcu_sched kthread starved for 1320147 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 7863.173016] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 7863.176734] 	(detected by 1, t=1365152 jiffies, g=8976, c=8975, q=13279)
+[ 7863.180702] All QSes seen, last rcu_sched kthread activity 1365152 (4296857728-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 7863.188159] rcu_sched kthread starved for 1365152 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 8043.180571] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 8043.183720] 	(detected by 1, t=1410157 jiffies, g=8976, c=8975, q=13677)
+[ 8043.187430] All QSes seen, last rcu_sched kthread activity 1410157 (4296902733-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 8043.193924] rcu_sched kthread starved for 1410157 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 8223.152534] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 8223.156000] 	(detected by 1, t=1455162 jiffies, g=8976, c=8975, q=14077)
+[ 8223.159587] All QSes seen, last rcu_sched kthread activity 1455162 (4296947738-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 8223.169353] rcu_sched kthread starved for 1455162 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 8403.240692] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 8403.243830] 	(detected by 1, t=1500167 jiffies, g=8976, c=8975, q=14475)
+[ 8403.247751] All QSes seen, last rcu_sched kthread activity 1500167 (4296992743-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 8403.255280] rcu_sched kthread starved for 1500167 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 8583.170986] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 8583.174594] 	(detected by 1, t=1545172 jiffies, g=8976, c=8975, q=14875)
+[ 8583.178288] All QSes seen, last rcu_sched kthread activity 1545172 (4297037748-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 8583.186501] rcu_sched kthread starved for 1545172 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 8763.242520] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 8763.246362] 	(detected by 1, t=1590177 jiffies, g=8976, c=8975, q=15273)
+[ 8763.250863] All QSes seen, last rcu_sched kthread activity 1590177 (4297082753-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 8763.258954] rcu_sched kthread starved for 1590177 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 8943.280908] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 8943.284808] 	(detected by 1, t=1635182 jiffies, g=8976, c=8975, q=15673)
+[ 8943.288571] All QSes seen, last rcu_sched kthread activity 1635182 (4297127758-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 8943.295282] rcu_sched kthread starved for 1635182 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 9123.232624] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 9123.235827] 	(detected by 1, t=1680187 jiffies, g=8976, c=8975, q=16071)
+[ 9123.239452] All QSes seen, last rcu_sched kthread activity 1680187 (4297172763-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 9123.245946] rcu_sched kthread starved for 1680187 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 9303.330429] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 9303.333978] 	(detected by 1, t=1725192 jiffies, g=8976, c=8975, q=16471)
+[ 9303.341909] All QSes seen, last rcu_sched kthread activity 1725192 (4297217768-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 9303.350008] rcu_sched kthread starved for 1725192 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 9483.260514] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 9483.264605] 	(detected by 1, t=1770197 jiffies, g=8976, c=8975, q=16869)
+[ 9483.268634] All QSes seen, last rcu_sched kthread activity 1770197 (4297262773-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 9483.276155] rcu_sched kthread starved for 1770197 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 9663.332768] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 9663.336327] 	(detected by 1, t=1815202 jiffies, g=8976, c=8975, q=17269)
+[ 9663.340471] All QSes seen, last rcu_sched kthread activity 1815202 (4297307778-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 9663.347912] rcu_sched kthread starved for 1815202 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[ 9843.320589] INFO: rcu_sched detected stalls on CPUs/tasks:
+[ 9843.324290] 	(detected by 1, t=1860207 jiffies, g=8976, c=8975, q=17667)
+[ 9843.328238] All QSes seen, last rcu_sched kthread activity 1860207 (4297352783-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[ 9843.335745] rcu_sched kthread starved for 1860207 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[10023.323022] INFO: rcu_sched detected stalls on CPUs/tasks:
+[10023.326852] 	(detected by 1, t=1905212 jiffies, g=8976, c=8975, q=18067)
+[10023.331054] All QSes seen, last rcu_sched kthread activity 1905212 (4297397788-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[10023.338673] rcu_sched kthread starved for 1905212 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[10203.370823] INFO: rcu_sched detected stalls on CPUs/tasks:
+[10203.374321] 	(detected by 1, t=1950217 jiffies, g=8976, c=8975, q=18465)
+[10203.378605] All QSes seen, last rcu_sched kthread activity 1950217 (4297442793-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[10203.386100] rcu_sched kthread starved for 1950217 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[10383.343192] INFO: rcu_sched detected stalls on CPUs/tasks:
+[10383.346944] 	(detected by 1, t=1995222 jiffies, g=8976, c=8975, q=18865)
+[10383.350594] All QSes seen, last rcu_sched kthread activity 1995222 (4297487798-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[10383.357123] rcu_sched kthread starved for 1995222 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[10563.453059] INFO: rcu_sched detected stalls on CPUs/tasks:
+[10563.456515] 	(detected by 1, t=2040227 jiffies, g=8976, c=8975, q=19263)
+[10563.460516] All QSes seen, last rcu_sched kthread activity 2040227 (4297532803-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[10563.467953] rcu_sched kthread starved for 2040227 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[10743.390750] INFO: rcu_sched detected stalls on CPUs/tasks:
+[10743.394704] 	(detected by 1, t=2085232 jiffies, g=8976, c=8975, q=19663)
+[10743.398746] All QSes seen, last rcu_sched kthread activity 2085232 (4297577808-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[10743.405930] rcu_sched kthread starved for 2085232 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[10923.463198] INFO: rcu_sched detected stalls on CPUs/tasks:
+[10923.468596] 	(detected by 1, t=2130237 jiffies, g=8976, c=8975, q=20061)
+[10923.472620] All QSes seen, last rcu_sched kthread activity 2130237 (4297622813-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[10923.479167] rcu_sched kthread starved for 2130237 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[11103.471307] INFO: rcu_sched detected stalls on CPUs/tasks:
+[11103.481321] 	(detected by 1, t=2175242 jiffies, g=8976, c=8975, q=20461)
+[11103.486802] All QSes seen, last rcu_sched kthread activity 2175242 (4297667818-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[11103.494115] rcu_sched kthread starved for 2175242 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[11283.483291] INFO: rcu_sched detected stalls on CPUs/tasks:
+[11283.487188] 	(detected by 1, t=2220247 jiffies, g=8976, c=8975, q=20859)
+[11283.491739] All QSes seen, last rcu_sched kthread activity 2220247 (4297712823-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[11283.500142] rcu_sched kthread starved for 2220247 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[11463.541533] INFO: rcu_sched detected stalls on CPUs/tasks:
+[11463.544743] 	(detected by 1, t=2265252 jiffies, g=8976, c=8975, q=21259)
+[11463.548547] All QSes seen, last rcu_sched kthread activity 2265252 (4297757828-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[11463.555179] rcu_sched kthread starved for 2265252 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[11643.470961] INFO: rcu_sched detected stalls on CPUs/tasks:
+[11643.474357] 	(detected by 1, t=2310257 jiffies, g=8976, c=8975, q=21657)
+[11643.478274] All QSes seen, last rcu_sched kthread activity 2310257 (4297802833-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[11643.485620] rcu_sched kthread starved for 2310257 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+[11823.573444] INFO: rcu_sched detected stalls on CPUs/tasks:
+[11823.577656] 	(detected by 1, t=2355262 jiffies, g=8976, c=8975, q=22057)
+[11823.581610] All QSes seen, last rcu_sched kthread activity 2355262 (4297847838-4295492576), jiffies_till_next_fqs=1, root ->qsmask 0x0
+[11823.588405] rcu_sched kthread starved for 2355262 jiffies! g8976 c8975 f0x2 s3 ->state=0x100
+ [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  422.882850]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  422.886079]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  422.889173]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  449.551653] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  449.557968] Modules linked in:
+[  449.560812] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  449.566651] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  449.571783] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  449.576687] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  449.582567] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  449.585891] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  449.590237] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  449.594720] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  449.599071] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  449.603550] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  449.608148] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  449.613575] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  449.617596] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  449.622324] Stack:
+[  449.624670]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  449.631917]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  449.638829]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  449.644853] Call Trace:
+[  449.646534]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  449.650111]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  449.653871]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  449.657328]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  449.660587]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  449.664154]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  449.667841]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  449.671175]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  449.674809]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  449.678005]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  449.681419]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  449.684704]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  449.687765]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  449.690841]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  449.694103]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  449.697284]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  449.701141] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  477.556872] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  477.563421] Modules linked in:
+[  477.566087] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  477.572720] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  477.578713] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  477.584050] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  477.590726] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  477.594505] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  477.599477] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  477.604563] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  477.609468] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  477.618155] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  477.625891] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  477.633780] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  477.638749] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  477.644135] Stack:
+[  477.645870]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  477.652527]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  477.658977]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  477.665786] Call Trace:
+[  477.667898]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  477.672576]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  477.677902]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  477.682823]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  477.687702]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  477.692930]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  477.698148]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  477.702974]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  477.708633]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  477.713176]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  477.717974]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  477.722713]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  477.727469]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  477.732335]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  477.737257]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  477.741806]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  477.746989] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  505.551218] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  505.557046] Modules linked in:
+[  505.559406] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  505.565509] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  505.570823] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  505.575840] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  505.581738] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  505.585088] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  505.589535] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  505.594136] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  505.598629] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  505.603202] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  505.607865] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  505.612492] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  505.615884] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  505.619792] Stack:
+[  505.621086]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  505.626003]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  505.631091]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  505.636031] Call Trace:
+[  505.637661]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  505.640841]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  505.644292]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  505.647499]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  505.650430]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  505.653826]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  505.657364]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  505.660773]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  505.664354]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  505.667410]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  505.670638]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  505.673798]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  505.676999]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  505.680205]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  505.683409]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  505.686617]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  505.690191] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  533.556269] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  533.562264] Modules linked in:
+[  533.565040] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  533.572198] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  533.578729] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  533.585051] RIP: 0010:[<ffffffff8110c02b>]  [<ffffffff8110c02b>] smp_call_function_single+0xdb/0x130
+[  533.592881] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  533.596901] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  533.602912] RDX: 0000000000000003 RSI: 00000000000000fb RDI: 0000000000000282
+[  533.609092] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  533.614870] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  533.620921] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  533.626746] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  533.633469] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  533.638835] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  533.644665] Stack:
+[  533.646559]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  533.654083]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  533.660909]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  533.666868] Call Trace:
+[  533.668986]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  533.672656]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  533.676390]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  533.679720]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  533.682751]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  533.686412]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  533.689909]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  533.693236]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  533.696937]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  533.699890]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  533.703016]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  533.706167]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  533.709629]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  533.712891]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  533.716426]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  533.719821]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  533.723652] Code: 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 8b 55 e0 <83> e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 3d 01 9a 
+[  561.547441] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  561.552388] Modules linked in:
+[  561.554421] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  561.561707] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  561.567593] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  561.573028] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  561.580141] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  561.584023] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  561.588911] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  561.593913] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  561.598821] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  561.603953] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  561.608863] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  561.614537] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  561.618562] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  561.623666] Stack:
+[  561.625883]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  561.632468]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  561.638882]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  561.645370] Call Trace:
+[  561.647356]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  561.651400]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  561.655757]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  561.659923]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  561.664034]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  561.667589]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  561.671103]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  561.674850]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  561.678719]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  561.681834]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  561.686190]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  561.690573]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  561.694572]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  561.698441]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  561.702397]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  561.706269]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  561.710865] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  589.547720] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 23s! [systemd-udevd:117]
+[  589.553044] Modules linked in:
+[  589.555233] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  589.563348] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  589.567862] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  589.572114] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  589.577365] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  589.580499] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  589.584297] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  589.588191] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  589.592009] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  589.595833] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  589.599656] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  589.604352] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  589.608712] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  589.613507] Stack:
+[  589.615110]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  589.621259]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  589.627541]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  589.633684] Call Trace:
+[  589.635539]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  589.639485]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  589.643730]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  589.647853]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  589.651506]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  589.655745]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  589.660295]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  589.664445]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  589.669011]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  589.671963]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  589.675081]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  589.678156]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  589.681173]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  589.684186]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  589.687450]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  589.690462]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  589.694051] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  602.679984] INFO: rcu_sched self-detected stall on CPU
+[  602.683531] 	1-...: (41841 ticks this GP) idle=84d/140000000000001/0 softirq=136/146 fqs=0 
+[  602.688420] 	 (t=150016 jiffies g=-263 c=-264 q=6996)
+[  602.691554] rcu_sched kthread starved for 150016 jiffies! g18446744073709551353 c18446744073709551352 f0x0 s3 ->state=0x1
+[  602.697599] Task dump for CPU 0:
+[  602.700642] systemd-udevd   R  running task        0   115    109 0x00000000
+[  602.706318]  00000000000364ce ffff8800364cbc00 0000000000000001 ffff88003d5dd200
+[  602.711235]  ffff8800364cbc10 ffff880036e23db8 ffffffff8121ca84 ffff880036e24000
+[  602.716293]  00007ffffffff000 ffff8800364cbc00 ffff880036e23ea8 00007f2e348c3e23
+[  602.721297] Call Trace:
+[  602.722950]  [<ffffffff8121ca84>] ? vfs_read+0x114/0x130
+[  602.725980]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  602.729035]  [<ffffffff8110ed6d>] ? copy_module_from_fd.isra.55+0xfd/0x150
+[  602.732751]  [<ffffffff81112cf4>] ? SYSC_finit_module+0xb4/0xe0
+[  602.735987]  [<ffffffff81112d3e>] ? SyS_finit_module+0xe/0x10
+[  602.739166]  [<ffffffff8186bb5b>] ? entry_SYSCALL_64_fastpath+0x22/0xd0
+[  602.742867] Task dump for CPU 1:
+[  602.745145] systemd-udevd   R  running task        0   117    109 0x00000008
+[  602.749440]  ffff88003ae32700 b8119388785d3a69 ffff88003fd03da0 ffffffff810b4d89
+[  602.754325]  0000000000000001 ffffffff81e577c0 ffff88003fd03db8 ffffffff810b75b7
+[  602.759227]  0000000000000002 ffff88003fd03de8 ffffffff810ec56e ffff88003fd16f80
+[  602.764084] Call Trace:
+[  602.765561]  <IRQ>  [<ffffffff810b4d89>] sched_show_task+0xa9/0x110
+[  602.769320]  [<ffffffff810b75b7>] dump_cpu_task+0x37/0x40
+[  602.772297]  [<ffffffff810ec56e>] rcu_dump_cpu_stacks+0x8e/0xe0
+[  602.775562]  [<ffffffff810f0560>] rcu_check_callbacks+0x500/0x7f0
+[  602.778866]  [<ffffffff81149f6c>] ? acct_account_cputime+0x1c/0x20
+[  602.782200]  [<ffffffff810b8059>] ? account_system_time+0x79/0x120
+[  602.785540]  [<ffffffff81106b70>] ? tick_sched_handle.isra.14+0x60/0x60
+[  602.789456]  [<ffffffff810f6a29>] update_process_times+0x39/0x60
+[  602.793327]  [<ffffffff81106b35>] tick_sched_handle.isra.14+0x25/0x60
+[  602.796907]  [<ffffffff81106bad>] tick_sched_timer+0x3d/0x70
+[  602.800302]  [<ffffffff810f7334>] __hrtimer_run_queues+0xf4/0x260
+[  602.803770]  [<ffffffff810f7a88>] hrtimer_interrupt+0xa8/0x1a0
+[  602.806997]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  602.810326]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  602.813460]  [<ffffffff81055b3e>] local_apic_timer_interrupt+0x3e/0x60
+[  602.816995]  [<ffffffff8186f44b>] smp_apic_timer_interrupt+0x4b/0x70
+[  602.820490]  [<ffffffff8186cb94>] apic_timer_interrupt+0xd4/0xe0
+[  602.823726]  <EOI>  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  602.827443]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  602.830755]  [<ffffffff8110c028>] ? smp_call_function_single+0xd8/0x130
+[  602.834465]  [<ffffffff8110c01e>] ? smp_call_function_single+0xce/0x130
+[  602.838172]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  602.841412]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  602.846036]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  602.849519]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  602.853073]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  602.857028]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  602.861010]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  602.864720]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  602.868755]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  602.872294]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  602.876115]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  602.879670]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  602.883323]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  602.886764]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  602.890379]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  602.893866]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  629.551569] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 23s! [systemd-udevd:117]
+[  629.556872] Modules linked in:
+[  629.559218] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  629.565156] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  629.570214] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  629.574910] RIP: 0010:[<ffffffff8110c02b>]  [<ffffffff8110c02b>] smp_call_function_single+0xdb/0x130
+[  629.580879] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  629.584665] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  629.589462] RDX: 0000000000000003 RSI: 00000000000000fb RDI: 0000000000000282
+[  629.594492] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  629.599633] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  629.604758] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  629.610615] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  629.616736] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  629.621014] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  629.626454] Stack:
+[  629.628437]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  629.635158]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  629.641607]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  629.649271] Call Trace:
+[  629.651042]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  629.655251]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  629.659927]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  629.664095]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  629.668452]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  629.672755]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  629.676303]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  629.679593]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  629.683216]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  629.686340]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  629.689557]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  629.692827]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  629.695968]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  629.698989]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  629.702217]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  629.705316]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  629.708864] Code: 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 8b 55 e0 <83> e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 3d 01 9a 
+[  657.560126] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  657.565303] Modules linked in:
+[  657.567541] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  657.573282] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  657.579040] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  657.584452] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  657.591018] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  657.594714] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  657.599554] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  657.604422] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  657.609319] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  657.613281] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  657.618121] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  657.623712] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  657.627969] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  657.636857] Stack:
+[  657.638741]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  657.646230]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  657.653587]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  657.661186] Call Trace:
+[  657.663499]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  657.668106]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  657.672241]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  657.675975]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  657.679291]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  657.682941]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  657.686607]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  657.690059]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  657.693844]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  657.696912]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  657.700214]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  657.703871]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  657.707429]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  657.711341]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  657.715128]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  657.718846]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  657.723189] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  685.548812] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  685.553181] Modules linked in:
+[  685.555178] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  685.561525] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  685.566100] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  685.570297] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  685.575471] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  685.578407] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  685.583017] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  685.587603] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  685.591583] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  685.595619] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  685.599568] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  685.604371] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  685.607712] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  685.611803] Stack:
+[  685.613183]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  685.619042]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  685.624365]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  685.629470] Call Trace:
+[  685.631021]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  685.634328]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  685.637865]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  685.641097]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  685.644004]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  685.647551]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  685.651045]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  685.654331]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  685.658020]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  685.661020]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  685.664208]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  685.667548]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  685.671191]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  685.674156]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  685.677295]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  685.680855]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  685.684839] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  713.559509] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  713.564948] Modules linked in:
+[  713.567366] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  713.573623] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  713.579000] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  713.584156] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  713.590430] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  713.594076] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  713.598941] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  713.603799] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  713.608662] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  713.613262] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  713.617683] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  713.622787] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  713.626603] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  713.631009] Stack:
+[  713.632468]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  713.638045]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  713.643578]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  713.649322] Call Trace:
+[  713.651096]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  713.654725]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  713.658620]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  713.662209]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  713.665492]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  713.669818]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  713.673722]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  713.677362]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  713.681299]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  713.684672]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  713.688385]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  713.691897]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  713.695295]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  713.698700]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  713.702246]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  713.705781]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  713.709966] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  741.550557] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  741.556616] Modules linked in:
+[  741.559533] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  741.565981] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  741.571763] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  741.577618] RIP: 0010:[<ffffffff8110c026>]  [<ffffffff8110c026>] smp_call_function_single+0xd6/0x130
+[  741.584195] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  741.587686] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  741.592909] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  741.597059] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  741.601112] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  741.606140] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  741.611529] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  741.618545] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  741.623611] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  741.629888] Stack:
+[  741.631993]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  741.640308]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  741.648178]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  741.656913] Call Trace:
+[  741.659924]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  741.664264]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  741.668758]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  741.672888]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  741.676571]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  741.681066]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  741.685410]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  741.689455]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  741.693860]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  741.697749]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  741.701899]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  741.705828]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  741.709653]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  741.713118]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  741.719653]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  741.722871]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  741.726564] Code: 33 1c 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf <f3> 90 8b 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 
+[  769.550854] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  769.555774] Modules linked in:
+[  769.558605] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  769.565279] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  769.570661] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  769.578640] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  769.584844] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  769.588340] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  769.592792] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  769.597226] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  769.601677] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  769.606280] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  769.610658] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  769.615687] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  769.619276] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  769.623979] Stack:
+[  769.625648]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  769.631793]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  769.637371]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  769.642885] Call Trace:
+[  769.644653]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  769.648398]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  769.652578]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  769.656169]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  769.659395]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  769.663171]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  769.667101]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  769.670850]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  769.674871]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  769.678315]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  769.681979]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  769.685962]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  769.689362]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  769.692848]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  769.696522]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  769.700146]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  769.704234] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  782.691814] INFO: rcu_sched self-detected stall on CPU
+[  782.695272] 	1-...: (54372 ticks this GP) idle=84d/140000000000001/0 softirq=136/146 fqs=0 
+[  782.700418] 	 (t=195019 jiffies g=-263 c=-264 q=6996)
+[  782.703934] rcu_sched kthread starved for 195019 jiffies! g18446744073709551353 c18446744073709551352 f0x0 s3 ->state=0x1
+[  782.710570] Task dump for CPU 0:
+[  782.712753] systemd-udevd   R  running task        0   115    109 0x00000000
+[  782.717530]  00000000000364ce ffff8800364cbc00 0000000000000001 ffff88003d5dd200
+[  782.723088]  ffff8800364cbc10 ffff880036e23db8 ffffffff8121ca84 ffff880036e24000
+[  782.729767]  00007ffffffff000 ffff8800364cbc00 ffff880036e23ea8 00007f2e348c3e23
+[  782.736130] Call Trace:
+[  782.738091]  [<ffffffff8121ca84>] ? vfs_read+0x114/0x130
+[  782.741889]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  782.746404]  [<ffffffff8110ed6d>] ? copy_module_from_fd.isra.55+0xfd/0x150
+[  782.751719]  [<ffffffff81112cf4>] ? SYSC_finit_module+0xb4/0xe0
+[  782.755992]  [<ffffffff81112d3e>] ? SyS_finit_module+0xe/0x10
+[  782.760161]  [<ffffffff8186bb5b>] ? entry_SYSCALL_64_fastpath+0x22/0xd0
+[  782.764815] Task dump for CPU 1:
+[  782.767504] systemd-udevd   R  running task        0   117    109 0x00000008
+[  782.772933]  ffff88003ae32700 b8119388785d3a69 ffff88003fd03da0 ffffffff810b4d89
+[  782.779212]  0000000000000001 ffffffff81e577c0 ffff88003fd03db8 ffffffff810b75b7
+[  782.785428]  0000000000000002 ffff88003fd03de8 ffffffff810ec56e ffff88003fd16f80
+[  782.791791] Call Trace:
+[  782.793786]  <IRQ>  [<ffffffff810b4d89>] sched_show_task+0xa9/0x110
+[  782.798423]  [<ffffffff810b75b7>] dump_cpu_task+0x37/0x40
+[  782.802201]  [<ffffffff810ec56e>] rcu_dump_cpu_stacks+0x8e/0xe0
+[  782.806463]  [<ffffffff810f0560>] rcu_check_callbacks+0x500/0x7f0
+[  782.811071]  [<ffffffff81149f6c>] ? acct_account_cputime+0x1c/0x20
+[  782.815305]  [<ffffffff810b8059>] ? account_system_time+0x79/0x120
+[  782.819536]  [<ffffffff81106b70>] ? tick_sched_handle.isra.14+0x60/0x60
+[  782.824025]  [<ffffffff810f6a29>] update_process_times+0x39/0x60
+[  782.828144]  [<ffffffff81106b35>] tick_sched_handle.isra.14+0x25/0x60
+[  782.832718]  [<ffffffff81106bad>] tick_sched_timer+0x3d/0x70
+[  782.836779]  [<ffffffff810f7334>] __hrtimer_run_queues+0xf4/0x260
+[  782.840954]  [<ffffffff810f7a88>] hrtimer_interrupt+0xa8/0x1a0
+[  782.845218]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  782.849263]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  782.853469]  [<ffffffff81055b3e>] local_apic_timer_interrupt+0x3e/0x60
+[  782.857962]  [<ffffffff8186f44b>] smp_apic_timer_interrupt+0x4b/0x70
+[  782.862417]  [<ffffffff8186cb94>] apic_timer_interrupt+0xd4/0xe0
+[  782.866650]  <EOI>  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  782.872183]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  782.876564]  [<ffffffff8110c028>] ? smp_call_function_single+0xd8/0x130
+[  782.881283]  [<ffffffff8110c01e>] ? smp_call_function_single+0xce/0x130
+[  782.886027]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  782.890127]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  782.894560]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  782.898845]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  782.902632]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  782.906963]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  782.911368]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  782.915410]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  782.919999]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  782.923768]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  782.927817]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  782.931817]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  782.935840]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  782.939788]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  782.944019]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  782.948781]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  809.547734] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 22s! [systemd-udevd:117]
+[  809.552299] Modules linked in:
+[  809.554389] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  809.560119] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  809.565395] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  809.570912] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  809.577454] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  809.581185] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  809.586097] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  809.591169] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  809.596255] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  809.601215] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  809.606185] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  809.611814] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  809.616689] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  809.621819] Stack:
+[  809.623502]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  809.630360]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  809.636987]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  809.643383] Call Trace:
+[  809.645342]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  809.649461]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  809.653661]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  809.657063]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  809.659975]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  809.663309]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  809.666755]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  809.669924]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  809.673380]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  809.676762]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  809.679986]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  809.683582]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  809.686697]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  809.689774]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  809.693015]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  809.696160]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  809.699830] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  837.544020] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 23s! [systemd-udevd:117]
+[  837.548866] Modules linked in:
+[  837.551388] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  837.557924] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  837.563676] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  837.569160] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  837.575799] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  837.579573] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  837.583775] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  837.587969] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  837.592688] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  837.597637] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  837.601505] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  837.605988] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  837.609322] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  837.613109] Stack:
+[  837.614692]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  837.620830]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  837.630760]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  837.636998] Call Trace:
+[  837.638945]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  837.643022]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  837.647444]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  837.651244]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  837.655140]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  837.658654]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  837.662260]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  837.665605]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  837.669310]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  837.672975]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  837.676576]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  837.680152]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  837.683649]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  837.687035]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  837.690674]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  837.694273]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  837.698649] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
+[  865.560212] NMI watchdog: BUG: soft lockup - CPU#1 stuck for 23s! [systemd-udevd:117]
+[  865.564634] Modules linked in:
+[  865.566660] CPU: 1 PID: 117 Comm: systemd-udevd Tainted: G             L  4.4.0-210-generic #242-Ubuntu
+[  865.571740] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[  865.576216] task: ffff88003ae32700 ti: ffff880036e6c000 task.ti: ffff880036e6c000
+[  865.580332] RIP: 0010:[<ffffffff8110c028>]  [<ffffffff8110c028>] smp_call_function_single+0xd8/0x130
+[  865.585595] RSP: 0018:ffff880036e6fa78  EFLAGS: 00010202
+[  865.588624] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[  865.592677] RDX: 0000000000000001 RSI: 00000000000000fb RDI: 0000000000000282
+[  865.596502] RBP: ffff880036e6fac0 R08: 0000000000000000 R09: 0000000000000003
+[  865.600292] R10: 00000000000281d0 R11: ffffffff81d0bb57 R12: ffffffff81076010
+[  865.604276] R13: 0000000000000000 R14: ffffffff81076010 R15: ffff880036e6fb40
+[  865.608277] FS:  00007f2e355598c0(0000) GS:ffff88003fd00000(0000) knlGS:0000000000000000
+[  865.612694] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  865.615919] CR2: 00007f2e35558e31 CR3: 0000000036e53000 CR4: 00000000000206f0
+[  865.619744] Stack:
+[  865.621015]  0000000036ddf200 ffff88003fd19ba8 0000000000000000 ffffffff81076010
+[  865.626103]  ffff880036e6fb40 0000000000000003 b8119388785d3a69 ffffffff81f435c0
+[  865.631060]  0000000000000001 ffff880036e6fb08 ffffffff8110c3d9 0000000000000001
+[  865.636057] Call Trace:
+[  865.637546]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  865.640770]  [<ffffffff8110c3d9>] smp_call_function_many+0x219/0x260
+[  865.644242]  [<ffffffff81076010>] ? x86_configure_nx+0x50/0x50
+[  865.647567]  [<ffffffff8110c4fd>] on_each_cpu+0x2d/0x60
+[  865.650653]  [<ffffffff81076b19>] flush_tlb_kernel_range+0x79/0x80
+[  865.654534]  [<ffffffff811daddc>] __purge_vmap_area_lazy+0x2ec/0x360
+[  865.658026]  [<ffffffff811daf65>] vm_unmap_aliases+0x115/0x140
+[  865.661323]  [<ffffffff81071f7e>] change_page_attr_set_clr+0xee/0x4f0
+[  865.664899]  [<ffffffff8107307f>] set_memory_ro+0x2f/0x40
+[  865.668149]  [<ffffffff8110e473>] frob_text.isra.32+0x23/0x30
+[  865.671672]  [<ffffffff8110fa27>] module_enable_ro+0x27/0x70
+[  865.674954]  [<ffffffff81111b27>] load_module+0xcf7/0x1c80
+[  865.678112]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  865.681197]  [<ffffffff81112cf4>] SYSC_finit_module+0xb4/0xe0
+[  865.684374]  [<ffffffff81112d3e>] SyS_finit_module+0xe/0x10
+[  865.687465]  [<ffffffff8186bb5b>] entry_SYSCALL_64_fastpath+0x22/0xd0
+[  865.691304] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 02 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 e8 00 01 85 c0 75 85 80 
