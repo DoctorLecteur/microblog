@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-01 21:42+0300\n"
+"POT-Creation-Date: 2022-06-13 19:40+0300\n"
 "PO-Revision-Date: 2022-05-23 20:20+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -111,7 +111,7 @@ msgstr "Готово"
 
 #: app/main/forms.py:31
 msgid "Say something"
-msgstr "Скажите что-то"
+msgstr "Напишите что-нибудь"
 
 #: app/main/forms.py:35 app/main/routes.py:159
 msgid "Search"
