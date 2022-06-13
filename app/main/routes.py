@@ -27,9 +27,8 @@ def before_request():
 def index():
     form = PostForm()
     if form.validate_on_submit():
-        try:
-            language = get_language(form.post.data)
-        except flash(_('Error: the translation service failed.')):
+        language = get_language(form.post.data)
+        if len(language) > 2:
             language = ''
         post = Post(body=form.post.data, author=current_user,
                     language=language)
