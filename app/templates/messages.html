@@ -13,7 +13,7 @@
                 </a>
             </li>
             <li class="next{% if not next_url %} disabled{% endif %}">
-                <a href="{{ next_url of '#' }}">
+                <a href="{{ next_url or '#' }}">
                     {{ _('Older messages') }} <span aria-hidden="true">&rarr;</span>
                 </a>
             </li>

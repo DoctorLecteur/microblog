@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-23 23:13+0300\n"
+"POT-Creation-Date: 2022-06-24 21:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -160,11 +160,11 @@ msgstr ""
 msgid "You are not following %(username)s."
 msgstr ""
 
-#: app/main/routes.py:177
+#: app/main/routes.py:178
 msgid "Your message has been sent."
 msgstr ""
 
-#: app/main/routes.py:179
+#: app/main/routes.py:180
 msgid "Send Message"
 msgstr ""
 
@@ -185,19 +185,19 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: app/templates/base.html:37
+#: app/templates/base.html:37 app/templates/messages.html:4
 msgid "Messages"
 msgstr ""
 
-#: app/templates/base.html:40
+#: app/templates/base.html:46
 msgid "Profile"
 msgstr ""
 
-#: app/templates/base.html:41
+#: app/templates/base.html:47
 msgid "Logout"
 msgstr ""
 
-#: app/templates/base.html:79
+#: app/templates/base.html:85
 msgid "Error: Cloud not contact server."
 msgstr ""
 
@@ -212,6 +212,14 @@ msgstr ""
 
 #: app/templates/index.html:21 app/templates/user.html:50
 msgid "Older posts"
+msgstr ""
+
+#: app/templates/messages.html:12
+msgid "Newer messages"
+msgstr ""
+
+#: app/templates/messages.html:17
+msgid "Older messages"
 msgstr ""
 
 #: app/templates/search.html:4
