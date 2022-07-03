@@ -22,3 +22,4 @@ class Config(object):
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY') #token YANDEX API TRANSLATE
     MS_FOLDER_ID = os.environ.get('MS_FOLDER_ID') #id catalog translate
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
